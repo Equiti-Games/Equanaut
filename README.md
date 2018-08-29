@@ -31,7 +31,7 @@ The Procfile in this repository is currently set to run the first version (with 
 
 
 ## Credits
-[Python Telegram Bot](https://github.con/python-telegram-bot) [Their telegram group](https://t.me/pythontelegrambotgroup) 
+[Python Telegram Bot](https://github.con/python-telegram-bot) the creaters of the library this bot uses. [Their telegram group](https://t.me/pythontelegrambotgroup) 
 
 ## Contributing to this reposiory
 If you would like to contribute to this repository please file Pull Requests for your code. 
