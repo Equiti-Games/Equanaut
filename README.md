@@ -27,8 +27,7 @@ $ heroku create <appname>
 ```
 
 ## Procfile
-The Procfile in this repository is currently set to run the first version (with the simple http server) Change it to whatever you need.
-
+The Procfile in this repository is currently set to run Herokubot.py which uses Heroku's built in webhook server.
 
 ## Credits
 [Python Telegram Bot](https://github.con/python-telegram-bot) the creaters of the library this bot uses. [Their telegram group](https://t.me/pythontelegrambotgroup) 
