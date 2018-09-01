@@ -46,7 +46,9 @@ def new_post_rules(bot, update):
             logger.info("welcoming = "+name)
             msg = ("Welcome to "+ str(chat_name) + " %s" % (member.name))+ '' + str(rules_list)
             message = bot.sendMessage(chat_id=chat_id, text=msg, parse_mode='MARKDOWN')
- 
+    
+    bot.delete_message(chat_id=chat_id, message_id=message_id)
+
     pprint('Room: '+str(chat_name))
     pprint('Chat_id: '+str(chat_id))
 
