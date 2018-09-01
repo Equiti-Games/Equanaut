@@ -25,8 +25,8 @@ def start(bot, update):
 # def echo(bot, update):
 #     update.effective_message.reply_text(update.effective_message.text)
 
-# def errors(bot, update, error):
-#     logger.warning('Update "%s" caused error "%s"' % (str(update), error))
+def errors(bot, update, error):
+    logger.warning('Update "%s" caused error "%s"' % (str(update), error))
 
 def clear_joins(bot, update):
     message_id = update.message.message_id
