@@ -34,6 +34,7 @@ def clear_joins(bot, update):
     chat_name = update.message.chat.title
 
     bot.delete_message(chat_id=chat_id, message_id=message_id)
+    logger.info("clearing system message in " +chat_name + "  " + chat_id)
 
 # def new_post_rules(bot, update):
 #     user_id = update.message.from_user.id
