@@ -26,6 +26,18 @@ def start(bot, update):
     logger.info('Saying Hi in "%s" with chatID "%s' % (str(chat_name), str(chat_id)))
 
 
+def promote_admin(bot, update):
+    message_id = update.message.message_id
+    chat_id = update.message.chat.id
+    chat_name = update.message.chat.title
+    user_id = update.message.from_user.id
+    name = get_name(update)
+    new_chat_mem = update.message.new_chat_members
+
+    promote_chat_member(chat_id,user_id,can_change_info=True, can_post_messages=True, 
+        can_edit_messages=True, can_delete_messages=True, can_invite_users=True, 
+        can_restrict_members=True, can_pin_messages=True, can_promote_members=True)
+
 # def echo(bot, update):
 #     update.effective_message.reply_text(update.effective_message.text)
 
@@ -116,6 +128,7 @@ if __name__ == "__main__":
     #dp.add_handler(CommandHandler('rules', post_rules))
     dp.add_handler(MessageHandler(Filters.status_update.new_chat_members, clear_joins))
     dp.add_handler(MessageHandler(Filters.status_update.left_chat_member, clear_joins))
+    dp.add_handler(CommandHandler('promot', promote_admin))
     dp.add_error_handler(errors)
 
     # Start the webhook
