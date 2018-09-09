@@ -20,6 +20,10 @@ def get_name(update):
 
 def start(bot, update):
     update.effective_message.reply_text("Hi!")
+    chat_id = update.message.chat.id
+    chat_name = update.message.chat.title
+
+    logger.info("Saying Hi in %s :" + chat_id) % chat_name
 
 
 # def echo(bot, update):
