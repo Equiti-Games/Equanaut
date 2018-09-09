@@ -23,7 +23,7 @@ def start(bot, update):
     chat_id = update.message.chat.id
     chat_name = update.message.chat.title
 
-    logger.info("Saying Hi in %s :" + str(chat_id)) % str(chat_name)
+    logger.info("Saying Hi in %s :" + str(chat_id)) % (str(chat_name))
 
 
 # def echo(bot, update):
