@@ -23,7 +23,7 @@ def start(bot, update):
     chat_id = update.message.chat.id
     chat_name = update.message.chat.title
 
-    logger.info("Saying Hi in %s :" + chat_id) % chat_name
+    logger.info("Saying Hi in %s :" + str(chat_id)) % str(chat_name)
 
 
 # def echo(bot, update):
@@ -38,7 +38,7 @@ def clear_joins(bot, update):
     chat_name = update.message.chat.title
 
     bot.delete_message(chat_id=chat_id, message_id=message_id)
-    logger.info("clearing system message in " +chat_name + "  " + chat_id)
+    logger.info("clearing system message in " + str(chat_name) + "  " + str(chat_id))
 
 # def new_post_rules(bot, update):
 #     user_id = update.message.from_user.id
