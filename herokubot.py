@@ -35,7 +35,7 @@ def promote_admin(bot, update, args):
     chat_name = update.message.chat.title
     user_id = update.message.from_user.id
     name = get_name(update)
-    mentioned_user = args[0]
+    mentioned_user = args[1]
 
     if user_id in get_admin_ids(bot, update.message.chat_id):
     # admin only
