@@ -29,19 +29,19 @@ def get_admin_ids(bot, chat_id):
     """Returns a list of admin IDs for a given chat."""
     return [admin.user.id for admin in bot.get_chat_administrators(chat_id)]
 
-def promote_admin(bot, update, args):
-    message_id = update.message.message_id
-    chat_id = update.message.chat.id
-    chat_name = update.message.chat.title
-    user_id = update.message.from_user.id
-    name = get_name(update)
-    mentioned_user = args[1]
-
-    if user_id in get_admin_ids(bot, update.message.chat_id):
-    # admin only
-        bot.promote_chat_member(chat_id, mentioned_user, can_change_info=True, can_post_messages=True, 
-            can_edit_messages=True, can_delete_messages=True, can_invite_users=True, 
-            can_restrict_members=True, can_pin_messages=True, can_promote_members=True)
+#### Feature to be implimented in future potentially. 
+# def promote_admin(bot, update, args):
+#     message_id = update.message.message_id
+#     chat_id = update.message.chat.id
+#     chat_name = update.message.chat.title
+#     user_id = update.message.from_user.id
+#     name = get_name(update)
+#     mentioned_user = 
+#     if user_id in get_admin_ids(bot, update.message.chat_id):
+#     # admin only
+#         bot.promote_chat_member(chat_id, mentioned_user, can_change_info=True, can_post_messages=True, 
+#             can_edit_messages=True, can_delete_messages=True, can_invite_users=True, 
+#             can_restrict_members=True, can_pin_messages=True, can_promote_members=True)
 
 # def echo(bot, update):
 #     update.effective_message.reply_text(update.effective_message.text)
